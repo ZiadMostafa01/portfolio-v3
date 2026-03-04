@@ -48,7 +48,7 @@ function About() {
 
       <div className="flex flex-col relative z-0 xl:flex-row justify-between gap-10 space-y-20 py-12 md:px-3 lg:px-20 xl:px-5 2xl:px-36">
         {/* Left-section */}
-        <div className="flex flex-col md:flex-row text-center md:text-start justify-between items-center space-y-16">
+        <div className="flex flex-col md:flex-row  justify-between items-center space-y-16">
           <div
             data-aos="fade-up"
             className="w-full md:w-[60%] rounded-2xl text-xl px-5 space-y-6 tracking-wide leading-9"

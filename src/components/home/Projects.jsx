@@ -1,3 +1,4 @@
+import { useState } from "react"; // استيراد useState
 import cardImage from "../../assets/images/cardImage.png";
 import cardImage2 from "../../assets/images/cardImage2.png";
 import cardImage3 from "../../assets/images/cardImage3.png";
@@ -6,8 +7,10 @@ import cardImage5 from "../../assets/images/cardImage5.png";
 import cardImage6 from "../../assets/images/cardImage6.png";
 
 const checkTools = {
-  completed: "bg-green-500 rounded-full text-center font-semibold w-fit px-3",
-  underDevelop: "bg-red-500 rounded-full text-center font-semibold w-fit px-3",
+  completed:
+    "bg-green-500 rounded-full text-white text-center font-semibold w-fit px-3",
+  underDevelop:
+    "bg-red-500 rounded-full  text-white  text-center font-semibold w-fit px-3",
 };
 const tools = "bg-[var(--bg-card)] text-center rounded-full px-3";
 
@@ -93,6 +96,14 @@ const myProjects = [
 ];
 
 function Projects() {
+  // الحالة للتحكم في عدد المشاريع المعروضة
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  // دالة لزيادة العدد المعروض
+  const showMoreProjects = () => {
+    setVisibleCount((prevCount) => prevCount + 3);
+  };
+
   return (
     <section id="Projects" className="text-[var(--text-main)]">
       <div className="py-20 space-y-24">
@@ -113,7 +124,6 @@ function Projects() {
           ></div>
 
           <div className="relative isolate">
-            {/* Info */}
             <div className="mx-auto max-w-xl text-center">
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-title)]">
                 My Projects
@@ -127,22 +137,22 @@ function Projects() {
         </div>
 
         <div className="relative z-0 px-2 flex flex-wrap justify-center items-start gap-10">
-          {myProjects.map((item) => {
+          {/* استخدام slice لعرض المشاريع بناءً على العدد الحالي فقط */}
+          {myProjects.slice(0, visibleCount).map((item) => {
             return (
               <div key={item.id} data-aos="zoom-in">
-                <div
-                  key={item.projectTitle}
-                  className="bg-[var(--bg-card)] border transition duration-300 hover:border-[var(--primary)] hover:shadow-[0_0_20px_rgba(168,85,247,0.9)] border-[var(--border)] rounded-lg w-full max-w-[460px]"
-                >
-                  <div className="">
+                <div className="bg-[var(--bg-card)] border transition duration-300 hover:border-[var(--primary)] hover:shadow-[0_0_20px_rgba(168,85,247,0.9)] border-[var(--border)] rounded-lg w-full max-w-[460px]">
+                  <div>
                     <img
                       src={item.imgPath}
                       className="rounded-t-lg w-full"
-                      alt=""
+                      alt={item.projectTitle}
                     />
                     <div className="px-7 py-6">
                       <div className="mb-5">
-                        <h1 className="font-bold text-[var(--text-title)]">{item.projectTitle}</h1>
+                        <h1 className="font-bold text-[var(--text-title)]">
+                          {item.projectTitle}
+                        </h1>
                         <p>{item.description}</p>
                       </div>
 
@@ -150,7 +160,7 @@ function Projects() {
                         <div className={item.state}>
                           <span>{item.stateName}</span>
                         </div>
-                        <ul className="flex gap-3 flex-wrap ">
+                        <ul className="flex gap-3 flex-wrap">
                           {item.skills.map((skill, index) => (
                             <li key={index} className={tools}>
                               <span>{skill}</span>
@@ -164,7 +174,8 @@ function Projects() {
                         <a
                           href={item.link}
                           target="_blank"
-                          className="space-x-2 hover:text-cyan-600 transition duration-300"
+                          rel="noreferrer"
+                          className="space-x-2 hover:text-[var(--primary)] transition duration-300"
                         >
                           <i className="fa-solid fa-up-right-from-square"></i>
                           <span className="text-lg font-bold">
@@ -173,7 +184,9 @@ function Projects() {
                         </a>
                         <a
                           href={item.github}
-                          className="text-3xl  hover:text-cyan-600 transition duration-300"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-3xl hover:text-[var(--primary)] transition duration-300"
                         >
                           <i className="fab fa-github"></i>
                         </a>
@@ -185,8 +198,21 @@ function Projects() {
             );
           })}
         </div>
+
+        {/* زرار Show More - يظهر فقط في حالة وجود مشاريع متبقية */}
+        {visibleCount < myProjects.length && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={showMoreProjects}
+              className="cursor-pointer flex items-center gap-2 bg-white/5 border-2 border-[var(--border)] hover:border-[var(--primary)] hover:shadow-[0_0_30px_rgba(192,132,252,0.5)] text-[var(--primary)] px-8 py-4 rounded-xl font-bold   transition-all hover:-translate-y-1"
+            >
+              Show More Projects
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
 }
+
 export default Projects;
