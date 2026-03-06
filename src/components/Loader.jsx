@@ -38,6 +38,7 @@ const Loader = ({ onFinished }) => {
 
   return (
     <div
+      dir="ltr"
       className={`fixed inset-0 z-[10000] flex items-center justify-center bg-[#020617] transition-all duration-500 ease-in-out ${
         fadeOut ? "opacity-0 pointer-events-none scale-105" : "opacity-100"
       }`}

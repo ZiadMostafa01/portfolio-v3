@@ -12,14 +12,14 @@ function Footer() {
             className="bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-3xl/[1.07] mb-5 font-bold tracking-tight text-transparent md:text-3xl/[1.07]"
             style={{ opacity: 1, transform: "none" }}
           >
-            <span className="animate-pulse text-gradient w-fit px-1 drop-shadow-[0_0_30px_rgba(192,132,252,0.5)] font-DGAsca inline-block">
-              {t("header.firstName")} {t("header.secondName")}
+            <span className="animate-pulse text-gradient w-fit p-1  drop-shadow-[0_0_30px_rgba(192,132,252,0.5)] font-DGAsca inline-block">
+              {t("footer.firstName")} {t("footer.secondName")}
             </span>
           </a>
 
-          <div className="text-xl">Web Developer & Programmer</div>
+          <div className="text-xl">{t("footer.title")}</div>
         </div>
-        <div className="">© 2025 Ziad Mostafa. All rights reserved.</div>
+        <div className="">{t("footer.copyright")}</div>
       </div>
     </footer>
   );

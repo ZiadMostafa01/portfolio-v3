@@ -19,28 +19,20 @@
     },
     "state": "Open to work"
   },
-  "cards": {
-    "head": {
-      "title": "Civil Engineering Journey",
-      "description": "With 12+ years of experience in Egypt and Saudi Arabia, I’ve worked on residential, commercial, and infrastructure projects, ensuring quality and impact from planning to completion."
-    },
-    "card1": {
-      "title": "QA/QC Management",
-      "description": "Ensuring top construction quality through inspections, audits, and compliance with international standards."
-    },
-    "card2": {
-      "title": "Construction & Project Execution",
-      "description": "Managing projects from planning to handover, controlling time, cost, and stakeholder coordination."
-    },
-    "card3": {
-      "title": "Consultancy & Supervision",
-      "description": "Supervising site execution to ensure compliance with designs, safety, and client requirements."
-    }
+  "about": {
+    "title": "About",
+    "firstName": " Ziad",
+    "secondName": "Mostafa ",
+    "description1": "Hi! I’m",
+    "description2": "a Frontend Developer passionate about building interactive and responsive web applications. I specialize in React, Tailwind CSS, and modern web development tools, creating clean, efficient, and user-friendly interfaces that bring ideas to life.",
+    "description3": "I enjoy turning concepts into functional designs, learning new technologies, and continuously improving my skills to stay up-to-date with the latest trends in web development. My goal is to craft engaging digital experiences that make a real impact on users and contribute to meaningful projects that solve real-world problems."
   },
 
   "certificates": {
     "title": "My Certifications",
-    "description": "Here are some of my certificates that reflect my continuous learning journey and commitment to professional growth."
+    "description": "Here are some of my certificates that reflect my continuous learning journey and commitment to professional growth.",
+    "loading": "Loading Certificates...",
+    "empty": "Coming Soon! No Certificates to display right now."
   },
   "contact": {
     "head": {
@@ -51,15 +43,15 @@
       "title": "Contact Information",
       "location": {
         "label": "Location",
-        "value": "Riyadh, KSA"
+        "value": "Fayoum, Egypt"
       },
       "email": {
         "label": "Email",
-        "value": "tahashahin75@gmail.com"
+        "value": "ziadmostafa9866@gmail.com"
       },
       "phone": {
         "label": "Phone",
-        "value": "+966 54 931 9867"
+        "value": "7648 779 102 20+"
       },
       "follow": "Follow Me"
     },
@@ -70,18 +62,16 @@
       "message": "Message",
       "btn": {
         "send": "Send Message",
-        "pending": "submitting"
+        "pending": "Sending..."
       },
       "succesMessage": " Your Message has been sent successfully"
     }
   },
   "footer": {
-    "firstName": "Taha",
-    "secondName": "Fawzy",
-    "title": "Civil Construction Manager | QA/QC Leader | Consultant Engineer",
-    "copyright": "© 2025 Taha Fawzy. All rights reserved.",
-    "developed": "Developed By",
-    "Eng": "Eng."
+    "firstName": "Ziad",
+    "secondName": "Mostafa",
+    "title": "Web Developer & Programmer",
+    "copyright": "© 2025 Ziad Mostafa. All rights reserved."
   },
 
   "projects": {
@@ -89,9 +79,11 @@
       "title": "My Projects",
       "description": "Here are some of my recent projects that showcase my skills and expertise in web development."
     },
+    "loading": "Loading Projects...",
+    "empty": "Coming Soon! No projects to display right now.",
     "buttons": {
       "button1": "View Project",
-      "button2": "See More Projects",
+      "button2": "Show More Projects",
       "button3": "Download Layout PDF"
     },
     "location": "Location",

@@ -26,7 +26,7 @@ const Landing = () => {
           <div
             data-aos={i18n.language === "ar" ? "fade-left" : "fade-right"}
             data-aos-delay="100"
-            className="font-code text-[var(--primary)] sm:text-xl mb-4 flex items-center gap-2 "
+            className="font-code text-[var(--primary)] sm:text-xl mb-4"
           >
             <Typewriter
               key={i18n.language}
@@ -235,6 +235,7 @@ const Landing = () => {
 
         {/* Image Side */}
         <div
+          dir="ltr"
           data-aos="fade-up"
           data-aos-offset="0"
           key={i18n.language}
@@ -269,7 +270,7 @@ const Landing = () => {
                 <Badge
                   icon="fab fa-node-js"
                   title="Node.js"
-                  sub="ES6+, TypeScript, jQuery"
+                  sub="Express, API, MongoDB"
                   classes="bottom-6 sm:bottom-20 -right-10 sm:-right-16"
                   delay="-1s"
                 />
@@ -277,7 +278,7 @@ const Landing = () => {
                 <Badge
                   icon="fab fa-js"
                   title="JavaScript"
-                  sub="Express, Socket.io, MongoDB"
+                  sub="ES6+, TypeScript, Tailwind"
                   classes="top-1/2 -left-10 sm:-left-24"
                   delay="-2s"
                 />

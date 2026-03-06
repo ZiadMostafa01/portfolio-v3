@@ -17,6 +17,8 @@
     "@formspree/react": "^3.0.0",
     "@tailwindcss/vite": "^4.1.11",
     "aos": "^2.3.4",
+    "axios": "^1.13.6",
+    "firebase": "^12.10.0",
     "framer-motion": "^12.23.12",
     "i18next": "^25.8.13",
     "lottie-react": "^2.4.1",

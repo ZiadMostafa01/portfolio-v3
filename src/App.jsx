@@ -45,9 +45,7 @@ function App() {
       {/* المحتوى: 
          1. بنستخدم opacity-0 لو لسه محملش و opacity-100 لما يجهز.
          2. transition-opacity بتخلي الظهور ناعم (Fade).
-         
       */}
-
       <main
         className={`transition-opacity duration-1000 ease-in-out ${
           contentReady ? "opacity-100" : "opacity-0"

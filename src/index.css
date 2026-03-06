@@ -2,9 +2,9 @@
 html,
 body {
   scroll-behavior: smooth;
-  font-family: font-poppins;
+    font-family: 'Almarai', sans-serif !important;
   overflow-x: hidden;
-  background-color: #020617; /* نفس لون الـ bg-slate-950 بتاعك */
+  background-color: #020617;
   color-scheme: dark;
 }
 
