@@ -5,7 +5,7 @@ import { Pagination, EffectCoverflow } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 // ... الاستيرادات اللي عندك
 import { CONFIG } from "../../config/Api";
-
+const API_URL = CONFIG.CERTIFICATES_API;
 // استخراج الروابط من الـ Config والـ ENV
 // Swiper Styles
 import "swiper/css";
