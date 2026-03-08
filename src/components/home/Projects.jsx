@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"; // ضفنا useEffect
 import axios from "axios"; // ضفنا axios
 import SectionHeader from "../common/SectionHeader";
 import { useTranslation } from "react-i18next";
-
+import { CONFIG } from "../../config/Api"; // تأكد من المسار حسب مكان الملف
 const checkTools = {
   completed:
     "bg-green-500 rounded-full text-white text-center font-semibold w-fit px-3",
@@ -20,7 +20,7 @@ function Projects() {
   useEffect(() => {
     setLoading(true); // نبدأ التحميل
     axios
-      .get("http://localhost:5000/api/projects")
+      .get(CONFIG.PROJECTS_API)
       .then((res) => {
         const formatted = res.data.map((proj) => {
           // تحديد الاستايل بناءً على الـ status
@@ -31,7 +31,7 @@ function Projects() {
 
           return {
             id: proj._id,
-            imgPath: `http://localhost:5000${proj.image}`,
+            imgPath: proj.image,
             projectTitle: proj.title,
             description: proj.description,
             state: statusStyle,

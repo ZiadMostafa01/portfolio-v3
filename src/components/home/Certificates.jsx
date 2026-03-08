@@ -3,15 +3,15 @@ import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow } from "swiper/modules";
 import { useTranslation } from "react-i18next";
+// ... الاستيرادات اللي عندك
+import { CONFIG } from "../../config/Api";
 
+// استخراج الروابط من الـ Config والـ ENV
 // Swiper Styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import SectionHeader from "../common/SectionHeader";
-
-const API_URL = "http://localhost:5000/api/certificates";
-const IMG_BASE_URL = "http://localhost:5000";
 
 function Certificates() {
   const [certificates, setCertificates] = useState([]);
@@ -98,7 +98,7 @@ function Certificates() {
                 }}
               >
                 <img
-                  src={`${IMG_BASE_URL}${cert.image}`}
+                  src={cert.image}
                   alt={cert.title}
                   loading="lazy"
                   className="w-full h-[200px] sm:h-[250px] object-cover rounded-lg"
@@ -153,8 +153,7 @@ function Certificates() {
             {/* الصورة المعروضة في المودال */}
             <img
               loading="lazy"
-              src={`${IMG_BASE_URL}${certificates[index].image}`}
-              alt={certificates[index].title}
+              src={certificates[index].image}
               className="max-h-[85vh] mx-auto rounded-lg shadow-2xl object-contain"
             />
 
